@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Users</h1>
+<h1>All users</h1>
 
 <table>
   <thead>
@@ -8,6 +8,7 @@
       <th>First name</th>
       <th>Last name</th>
       <th>Email</th>
+      <th>Birth date</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -18,6 +19,7 @@
         <td><%= user.first_name %></td>
         <td><%= user.last_name %></td>
         <td><%= user.email %></td>
+        <td><%= user.birth_date %></td>
         <td><%= link_to 'Show', user %></td>
         <td><%= link_to 'Edit', edit_user_path(user) %></td>
         <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -30,7 +32,7 @@
 
 <%= link_to 'New User', new_user_path %>
 
-<h1>Best user</h1>
+<h1>Today's birthday</h1>
 
 <table>
   <thead>
@@ -38,17 +40,15 @@
       <th>First name</th>
       <th>Last name</th>
       <th>Email</th>
-      <th>Random</th>
       <th colspan="3"></th>
     </tr>
   </thead>
 
   <tbody>
       <tr>
-        <td><%= @best_user.first_name %></td>
-        <td><%= @best_user.last_name %></td>
-        <td><%= @best_user.email %></td>
-        <td><%= @best_user.random %></td>
+        <td><%= @birthday_user.first_name %></td>
+        <td><%= @birthday_user.last_name %></td>
+        <td><%= @birthday_user.email %></td>
       </tr>
   </tbody>
 </table>

@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-  def self.best_user
-    find_by(last_name: 'best') || NullUser.new
+  def self.birthday_user
+    find_by(birth_date: Date.today) || NullUser.new
   end
 end
