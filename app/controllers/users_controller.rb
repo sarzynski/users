@@ -3,6 +3,7 @@ class UsersController < ApplicationController
 
   def index
     @users = User.all
+    @new_users = NewUsersQuery.new.new_users
     @birthday_user = User.birthday_user
   end
 
