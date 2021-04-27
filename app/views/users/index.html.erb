@@ -29,3 +29,26 @@
 <br>
 
 <%= link_to 'New User', new_user_path %>
+
+<h1>Best user</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>First name</th>
+      <th>Last name</th>
+      <th>Email</th>
+      <th>Random</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+      <tr>
+        <td><%= @best_user.first_name %></td>
+        <td><%= @best_user.last_name %></td>
+        <td><%= @best_user.email %></td>
+        <td><%= @best_user.random %></td>
+      </tr>
+  </tbody>
+</table>
