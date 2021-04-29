@@ -9,8 +9,7 @@ class UserForm
   def save
     if valid?
       user = User.new(first_name: first_name, last_name: last_name, email: email, birth_date: birth_date)
-      user.save!
-      true
+      user.save
     else
       false
     end
